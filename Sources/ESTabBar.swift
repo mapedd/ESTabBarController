@@ -229,7 +229,7 @@ internal extension ESTabBar /* Layout */ {
                 break
             }
             let width = bounds.size.width - itemEdgeInsets.left - itemEdgeInsets.right
-            let height = bounds.size.height - y - itemEdgeInsets.bottom
+            let height = min(49, bounds.size.height - y - itemEdgeInsets.bottom)
             let eachWidth = itemWidth == 0.0 ? width / CGFloat(containers.count) : itemWidth
             let eachSpacing = itemSpacing == 0.0 ? 0.0 : itemSpacing
             
